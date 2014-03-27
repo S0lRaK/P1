@@ -34,6 +34,40 @@ void introDatos(int edad, char sexo, float hemo)
 }
 */
 
+/*
+int introEdad(int edad)
+{
+	do
+	{
+		printf("\n\n Introduzca su edad: ");
+		scanf("%d", &edad);
+		fflush(stdin);	// para eliminar el búffer en teclado
+	}while(edad < 0);
+	return edad;
+}
+
+char introSexo(char sexo)
+{
+	do
+	{
+		printf(" Introduzca su sexo (M = Masculino | F = Femenino): ");
+		sexo = getchar();	// scanf(" %c", &sexo);
+		fflush(stdin);
+	}while(sexo != 'M' || sexo != 'm' || sexo != 'F' || sexo != 'f');
+	return sexo;
+}
+
+float introHemo(float hemo)
+{
+	do
+	{
+		printf(" Introduzca su nivel de hemoglobina (%%): ");
+		scanf("%f", &hemo);
+	}while(hemo < 0 || hemo > 100);
+	return hemo;
+}
+*/
+
 bool analizarDatos(int edad, char sexo, float hemo, bool anemia)
 {
 	if(edad == 0 || edad == 1)
@@ -99,14 +133,28 @@ void main()
 
 	printf("\n---- DIAGNÓSTICO DE ANEMIA ----");
 	
-	printf("\n\n Introduzca su edad: ");
-	scanf("%d", &edad);
-	fflush(stdin);	// para eliminar el búffer en teclado
-	printf(" Introduzca su sexo (M = Masculino | F = Femenino): ");
-	sexo = getchar();	// scanf(" %c", &sexo);
-	fflush(stdin);
-	printf(" Introduzca su nivel de hemoglobina (%%): ");
-	scanf("%f", &hemo);
+	// introEdad(edad);
+	do
+	{
+		printf("\n\n Introduzca su edad: ");
+		scanf("%d", &edad);
+		fflush(stdin);	// para eliminar el búffer en teclado
+	}while(edad < 0);
+	
+	//introSexo(sexo);
+	do
+	{
+		printf(" Introduzca su sexo (M = Masculino | F = Femenino): ");
+		sexo = getchar();	// scanf(" %c", &sexo);
+		fflush(stdin);
+	}while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f');
+
+	// introHemo(hemo);
+	do
+	{
+		printf(" Introduzca su nivel de hemoglobina (%%): ");
+		scanf("%f", &hemo);
+	}while(hemo < 0 || hemo > 100);
 		
 	analizarDatos(edad, sexo, hemo, anemia);	
 	darResultado(edad, sexo, anemia);
