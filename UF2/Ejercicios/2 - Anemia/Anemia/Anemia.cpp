@@ -68,37 +68,29 @@ float introHemo(float hemo)
 }
 */
 
-bool analizarDatos(int edad, char sexo, float hemo, bool anemia)
+bool analizarDatos(int edad, char sexo, float hemo)
 {
 	if(edad == 0 || edad == 1)
 	{
 		if(hemo < 11 || hemo > 15)
-			anemia = true;
-		else
-			anemia = false;
+			return true;
 	}
 	else if(edad > 1 && edad <= 15)
 	{
 		if(hemo < 11.5 || hemo > 15.5)
-			anemia = true;
-		else
-			anemia = false;
+			return true;
 	}
 	else if(edad > 15 && (sexo == 'F' || sexo == 'f')) // tolower (F/f)
 	{
 		if(hemo < 12 || hemo > 16)
-			anemia = true;
-		else
-			anemia = false;
+			return true;
 	}
 	else if(edad > 15 && (sexo == 'M' || sexo == 'm')) // tolower (M/m)
 	{
 		if(hemo < 14 || hemo > 18)
-			anemia = true;
-		else
-			anemia = false;
+			return true;
 	}
-	return anemia;
+	return false;
 }
 
 void darResultado(int edad, char sexo, bool anemia)
@@ -110,9 +102,9 @@ void darResultado(int edad, char sexo, bool anemia)
 			printf("\n Su nivel de hemoglobina debería estar entre el 11%% y el 15%%.");
 		else if(edad > 1 && edad <= 15)
 			printf("\n Su nivel de hemoglobina debería estar entre el 11.5%% y el 15.5%%.");
-		else if(edad > 15 && sexo == 'F')
+		else if(edad > 15 && sexo == 'F' || sexo == 'f')
 			printf("\n Su nivel de hemoglobina debería estar entre el 12%% y el 16%%.");
-		else if(edad > 15 && sexo == 'M')
+		else if(edad > 15 && sexo == 'M' || sexo == 'm')
 			printf("\n Su nivel de hemoglobina debería estar entre el 14%% y el 18%%.");		
 	}
 	else
@@ -144,7 +136,7 @@ void main()
 	//introSexo(sexo);
 	do
 	{
-		printf(" Introduzca su sexo (M = Masculino | F = Femenino): ");
+		printf(" Introduzca su sexo (M/m = Masculino | F/f = Femenino): ");
 		sexo = getchar();	// scanf(" %c", &sexo);
 		fflush(stdin);
 	}while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f');
@@ -156,7 +148,7 @@ void main()
 		scanf("%f", &hemo);
 	}while(hemo < 0 || hemo > 100);
 		
-	analizarDatos(edad, sexo, hemo, anemia);	
+	anemia = analizarDatos(edad, sexo, hemo); // al devolver un resultado la función, es necesario almacenarlo en una variable	
 	darResultado(edad, sexo, anemia);
 	
 	// Finalización del programa
