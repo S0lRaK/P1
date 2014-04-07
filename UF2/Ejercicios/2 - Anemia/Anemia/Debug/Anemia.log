@@ -1,12 +1,20 @@
-﻿Compilación iniciada a las 04/04/2014 11:17:09.
+﻿Compilación iniciada a las 07/04/2014 10:20:23.
      1>Proyecto "D:\Carlos J. García Carmona\GitHub\P1\UF2\Ejercicios\2 - Anemia\Anemia\Anemia.vcxproj" en el nodo 2 (build destinos).
      1>InitializeBuildStatus:
          Se creará "Debug\Anemia.unsuccessfulbuild" porque se especificó "AlwaysCreate".
        ClCompile:
-         Todas las salidas están actualizadas.
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Anemia.cpp
+         Anemia.cpp
+     1>d:\carlos j. garcía carmona\github\p1\uf2\ejercicios\2 - anemia\anemia\anemia.cpp(132): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(304) : vea la declaración de 'scanf'
+     1>d:\carlos j. garcía carmona\github\p1\uf2\ejercicios\2 - anemia\anemia\anemia.cpp(148): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(304) : vea la declaración de 'scanf'
        Link:
-         Todas las salidas están actualizadas.
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Carlos J. García Carmona\GitHub\P1\UF2\Ejercicios\2 - Anemia\Debug\Anemia.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Anemia.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Carlos J. García Carmona\GitHub\P1\UF2\Ejercicios\2 - Anemia\Debug\Anemia.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Carlos J. García Carmona\GitHub\P1\UF2\Ejercicios\2 - Anemia\Debug\Anemia.lib" /MACHINE:X86 Debug\Anemia.obj
+     1>Anemia.obj : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/INCREMENTAL:NO'
          Anemia.vcxproj -> D:\Carlos J. García Carmona\GitHub\P1\UF2\Ejercicios\2 - Anemia\Debug\Anemia.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Carlos J. García Carmona\GitHub\P1\UF2\Ejercicios\2 - Anemia\Debug\Anemia.exe;#1" /manifest Debug\Anemia.exe.intermediate.manifest
        FinalizeBuildStatus:
          Se eliminará el archivo "Debug\Anemia.unsuccessfulbuild".
          Aplicando tarea Touch a "Debug\Anemia.lastbuildstate".
@@ -14,4 +22,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:00.09
+Tiempo transcurrido 00:00:01.01

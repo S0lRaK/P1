@@ -68,7 +68,7 @@ float introHemo(float hemo)
 }
 */
 
-bool analizarDatos(int edad, char sexo, float hemo)
+bool analizarDatos(unsigned short int edad, char sexo, float hemo)
 {
 	if(edad == 0 || edad == 1)
 	{
@@ -93,7 +93,7 @@ bool analizarDatos(int edad, char sexo, float hemo)
 	return false;
 }
 
-void darResultado(int edad, char sexo, bool anemia)
+void darResultado(unsigned short int edad, char sexo, bool anemia)
 {
 	if(anemia == true)
 	{
@@ -118,7 +118,7 @@ void main()
 {
 	setlocale(LC_ALL, "spanish");
 	
-	int edad;
+	unsigned short int edad;
 	bool anemia = false;
 	char sexo;
 	float hemo;
@@ -129,9 +129,9 @@ void main()
 	do
 	{
 		printf("\n\n Introduzca su edad: ");
-		scanf("%d", &edad);
+		scanf("%u", &edad);
 		fflush(stdin);	// para eliminar el búffer en teclado
-	}while(edad < 0);
+	}while(edad > 130);
 	
 	//introSexo(sexo);
 	do
