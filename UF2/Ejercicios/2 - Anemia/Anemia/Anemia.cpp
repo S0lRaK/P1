@@ -14,9 +14,10 @@ Para programar este ejercicio debemos implementar la función siguiente:
 	Una función que dada la edad, el sexo y el nivel de hemoglobina nos devuelva si tiene anemia o no y el nivel mínimo y máximo de hemoglobina.
 */
 
+// Librerías
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>	// Librería necesaria para especificar el lenguaje ESPAÑOL
+#include <locale.h>	// para especificar el lenguaje ESPAÑOL
 
 // Es necesario devolver varios tipos de datos para usarlos en las otras funciones
 // Debe hacerse con APUNTADORES o STRUCTS
@@ -79,7 +80,53 @@ float introHemo(float hemo)
 }
 */
 
-bool analizarDatos(unsigned short int edad, char sexo, float hemo)
+// Prototipos
+bool analizarDatos(int edad, char sexo, float hemo);
+void darResultado(int edad, char sexo, bool anemia);
+
+void main()
+{
+	setlocale(LC_ALL, "spanish");
+	
+	int edad;	// unsigned short int ?
+	bool anemia = false;
+	char sexo;
+	float hemo;
+
+	printf("\n---- DIAGNÓSTICO DE ANEMIA ----");
+	
+	// introEdad(edad);
+	do
+	{
+		printf("\n\n Introduzca su edad: ");
+		scanf("%d", &edad);	// %u si unsigned short int
+		fflush(stdin);	// para eliminar el búffer en teclado
+	}while(edad < 0); // > 130 si unsigned short int
+	
+	//introSexo(sexo);
+	do
+	{
+		printf(" Introduzca su sexo (M/m = Masculino | F/f = Femenino): ");
+		sexo = getchar();	// scanf(" %c", &sexo);
+		fflush(stdin);
+	}while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f');
+
+	// introHemo(hemo);
+	do
+	{
+		printf(" Introduzca su nivel de hemoglobina (%%): ");
+		scanf("%f", &hemo);
+	}while(hemo < 0 || hemo > 100);
+		
+	anemia = analizarDatos(edad, sexo, hemo); // al devolver un resultado la función, es necesario almacenarlo en una variable	
+	darResultado(edad, sexo, anemia);
+	
+	// Finalización del programa
+	printf("\n\n");
+	system("pause");
+}
+
+bool analizarDatos(int edad, char sexo, float hemo)
 {
 	if(edad == 0 || edad == 1)
 	{
@@ -104,7 +151,7 @@ bool analizarDatos(unsigned short int edad, char sexo, float hemo)
 	return false;
 }
 
-void darResultado(unsigned short int edad, char sexo, bool anemia)
+void darResultado(int edad, char sexo, bool anemia)
 {
 	if(anemia == true)
 	{
@@ -123,46 +170,4 @@ void darResultado(unsigned short int edad, char sexo, bool anemia)
 		printf("\n\n El resultado del análisis es: NEGATIVO.");
 		printf("\n Usted está dentro de los niveles adecuados de hemoglobina.");
 	}
-}
-
-void main()
-{
-	setlocale(LC_ALL, "spanish");
-	
-	unsigned short int edad;
-	bool anemia = false;
-	char sexo;
-	float hemo;
-
-	printf("\n---- DIAGNÓSTICO DE ANEMIA ----");
-	
-	// introEdad(edad);
-	do
-	{
-		printf("\n\n Introduzca su edad: ");
-		scanf("%u", &edad);
-		fflush(stdin);	// para eliminar el búffer en teclado
-	}while(edad > 130);
-	
-	//introSexo(sexo);
-	do
-	{
-		printf(" Introduzca su sexo (M/m = Masculino | F/f = Femenino): ");
-		sexo = getchar();	// scanf(" %c", &sexo);
-		fflush(stdin);
-	}while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f');
-
-	// introHemo(hemo);
-	do
-	{
-		printf(" Introduzca su nivel de hemoglobina (%%): ");
-		scanf("%f", &hemo);
-	}while(hemo < 0 || hemo > 100);
-		
-	anemia = analizarDatos(edad, sexo, hemo); // al devolver un resultado la función, es necesario almacenarlo en una variable	
-	darResultado(edad, sexo, anemia);
-	
-	// Finalización del programa
-	printf("\n\n");
-	system("pause");
 }
