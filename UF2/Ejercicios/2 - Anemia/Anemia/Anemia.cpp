@@ -18,19 +18,30 @@ Para programar este ejercicio debemos implementar la función siguiente:
 #include <stdlib.h>
 #include <locale.h>	// Librería necesaria para especificar el lenguaje ESPAÑOL
 
-/*-- Es necesario devolver varios tipos de datos para usarlos en las otras funciones
-	 Debe hacerse con APUNTADORES o STRUCTS
-
+// Es necesario devolver varios tipos de datos para usarlos en las otras funciones
+// Debe hacerse con APUNTADORES o STRUCTS
+/*
 void introDatos(int edad, char sexo, float hemo)
 {
-	printf("\n\n Introduzca su edad: ");
-	scanf("%d", &edad);
-	fflush(stdin);	// para eliminar el búffer en teclado
-	printf(" Introduzca su sexo (M = Masculino | F = Femenino): ");
-	sexo = getchar();	// scanf(" %c", &sexo);
-	fflush(stdin);
-	printf(" Introduzca su nivel de hemoglobina (%%): ");
-	scanf("%f", &hemo);
+	do
+	{
+		printf("\n\n Introduzca su edad: ");
+		scanf("%d", &edad);
+		fflush(stdin);	// para eliminar el búffer en teclado
+	}while(edad < 0);
+	
+	do
+	{
+		printf(" Introduzca su sexo (M/m = Masculino | F/f = Femenino): ");
+		sexo = getchar();	// scanf(" %c", &sexo);
+		fflush(stdin);
+	}while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f');
+	
+	do
+	{
+		printf(" Introduzca su nivel de hemoglobina (%%): ");
+		scanf("%f", &hemo);
+	}while(hemo < 0 || hemo > 100);
 }
 */
 
