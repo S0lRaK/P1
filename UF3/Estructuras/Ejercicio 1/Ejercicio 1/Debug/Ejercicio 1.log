@@ -1,0 +1,33 @@
+﻿Compilación iniciada a las 10/04/2014 11:16:59.
+     1>Proyecto "D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Ejercicio 1\Ejercicio 1.vcxproj" en el nodo 2 (build destinos).
+     1>InitializeBuildStatus:
+         Se creará "Debug\Ejercicio 1.unsuccessfulbuild" porque se especificó "AlwaysCreate".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt "Ejercicio 1.cpp"
+         Ejercicio 1.cpp
+     1>d:\carlos j. garcía carmona\github\p1\uf3\estructuras\ejercicio 1\ejercicio 1\ejercicio 1.cpp(38): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(277) : vea la declaración de 'gets'
+     1>d:\carlos j. garcía carmona\github\p1\uf3\estructuras\ejercicio 1\ejercicio 1\ejercicio 1.cpp(41): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(277) : vea la declaración de 'gets'
+     1>d:\carlos j. garcía carmona\github\p1\uf3\estructuras\ejercicio 1\ejercicio 1\ejercicio 1.cpp(44): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(277) : vea la declaración de 'gets'
+     1>d:\carlos j. garcía carmona\github\p1\uf3\estructuras\ejercicio 1\ejercicio 1\ejercicio 1.cpp(47): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(304) : vea la declaración de 'scanf'
+     1>d:\carlos j. garcía carmona\github\p1\uf3\estructuras\ejercicio 1\ejercicio 1\ejercicio 1.cpp(50): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(304) : vea la declaración de 'scanf'
+     1>d:\carlos j. garcía carmona\github\p1\uf3\estructuras\ejercicio 1\ejercicio 1\ejercicio 1.cpp(53): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(277) : vea la declaración de 'gets'
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Debug\Ejercicio 1.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Ejercicio 1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Debug\Ejercicio 1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Debug\Ejercicio 1.lib" /MACHINE:X86 "Debug\Ejercicio 1.obj"
+         LINK : no se encontró D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Debug\Ejercicio 1.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+         Ejercicio 1.vcxproj -> D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Debug\Ejercicio 1.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Debug\Ejercicio 1.exe;#1" /manifest "Debug\Ejercicio 1.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Se eliminará el archivo "Debug\Ejercicio 1.unsuccessfulbuild".
+         Aplicando tarea Touch a "Debug\Ejercicio 1.lastbuildstate".
+     1>Compilación del proyecto terminada "D:\Carlos J. García Carmona\GitHub\P1\UF3\Estructuras\Ejercicio 1\Ejercicio 1\Ejercicio 1.vcxproj" (build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:01.01
