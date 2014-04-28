@@ -64,6 +64,12 @@ void main()
 	}
 	printf("\n El alumno %d (%s), es quién tiene mejor nota media (%f).", cont_alum, clase[cont_alum-1].nombre, max_media);
 
+	// Mostrar el nombre del alumno que tiene mejor nota de PB
+
+
+	// Mostrar el nombre del alumno que tiene mejor nota de LM
+
+
 	printf("\n\n");
 	system("pause");
 }
