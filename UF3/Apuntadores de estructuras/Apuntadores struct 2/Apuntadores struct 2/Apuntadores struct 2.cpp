@@ -3,7 +3,7 @@
 #include <string.h>
 #include <locale.h>	// para especificar el lenguaje ESPAÑOL
 
-// es necesario declarar la estructura antes de la biblioteca para que ésta pueda usarla
+//	es necesario declarar la estructura antes de la biblioteca para que ésta pueda usarla
 
 struct dir_persona
 {
@@ -21,8 +21,7 @@ void main()
 	setlocale(LC_ALL, "spanish");
 	struct dir_persona persona;
 
-	// guardamos los datos introducidos en la función en una variable
-	persona = introDatos(persona);
+	introDatos(&persona);	// pasamos la estructura por referencia
 
 	printf("\n\n Los datos introducidos de la persona son: ");
 	printf("\n %s %s", persona.apellidos, persona.nombre);

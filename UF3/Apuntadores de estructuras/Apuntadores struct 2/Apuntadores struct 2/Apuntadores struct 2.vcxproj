@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AEC712F4-6F9C-4B6D-8D2F-025FE9F25D44}</ProjectGuid>
+    <ProjectGuid>{53FCF01D-1CE4-4E11-806A-8384189A7F7F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Apuntadoresstruct1</RootNamespace>
+    <RootNamespace>Apuntadoresstruct2</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -74,7 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Apuntadores struct 1.cpp" />
+    <ClCompile Include="Apuntadores struct 2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="recogerDatos.h" />
