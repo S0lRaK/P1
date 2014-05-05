@@ -80,7 +80,7 @@ float introHemo(float hemo)
 }
 */
 
-// Prototipos
+// Prototipos de funciones
 bool analizarDatos(int edad, char sexo, float hemo);
 void darResultado(int edad, char sexo, bool anemia);
 
