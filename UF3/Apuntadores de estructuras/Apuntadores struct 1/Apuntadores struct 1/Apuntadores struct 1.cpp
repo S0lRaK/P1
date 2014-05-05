@@ -3,13 +3,15 @@
 #include <string.h>
 #include <locale.h>	// para especificar el lenguaje ESPAÑOL
 
+//	es necesario declarar la estructura antes de la biblioteca para que ésta pueda usarla
+
 struct dir_persona
 {
 	char nombre[20];
 	char apellidos[40];
 	char direccion[40];
-	unsigned short int numero;
-	unsigned short int codigo_postal;
+	short int numero;
+	long int codigo_postal;
 	char ciudad[40];
 };
 #include "recogerDatos.h"
