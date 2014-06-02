@@ -1,0 +1,2 @@
+Aquí tenéis 2 formas diferentes de hacer el examen.
+las mayores diferencias están en el código del cpp, en el main.
