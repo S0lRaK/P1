@@ -11,7 +11,7 @@ void omplirVector(float *vector, int pos)
 	}
 }
 
-bool minElements(float *vector, int n_pos, int min_pos)	// per a què li passem l'apuntador a vector??
+bool minElements(float *vector, int n_pos, int min_pos)
 {
 	if(n_pos >= (min_pos-1))
 		return true;
